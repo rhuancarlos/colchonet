@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
-	# Metodo de vizualização, levando em seus parametros o id do usuario para facilizar a 
+	def index
+	end
+
+	# Metodo de vizualização(mostrar), levando em seus parametros o id do usuario para facilizar a 
 	# precisão na exibição de um registro em especifico.
 	def show
 		@user = User.find(params[:id])
