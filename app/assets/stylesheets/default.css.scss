@@ -159,6 +159,16 @@ form{
 		@extend .padded_flash;
 	}
 
+	#notice{
+		color: $success-text-color;
+		border: 1px solid $success-text-color;
+		@extend .padded_flash;
+		background-color: #DFF0D8;
+	}
+
 	#alert{
-		
+		border: 1px solid $error-text-color;
+		color: $error-text-color;
+		background-color: #F2DEDE;
+		@extend .padded_flash;
 	}
