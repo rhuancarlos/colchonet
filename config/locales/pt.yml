@@ -13,17 +13,21 @@ pt:
   rooms:
     new:
       title: Cadastro
+      insert: Novo
     edit:
       title: Editar quarto
     show:
       title: Quartos
       edit: Editar quarto
       destroy: Remover
-      location: Localização
-      description: Descrição
+      location: Localização #tradução de dados
+      description: Descrição #tradução de dados
 
   links:
     back: Voltar
+    edit: Editar
+    show: Mostrar
+    destroy: Deletar
 
   layout:
     rooms: Quartos

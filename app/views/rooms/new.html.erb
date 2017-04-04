@@ -1,8 +1,10 @@
-<h1>
-	<span class="translation_missing"
-		title="translation missing: pt.users.new.title">
-		Title
-	</span>
-</h1>
+<h1> <%= t '.title' %></h1>
 <%= render 'form' %>
-<%= link_to t('links.back'), root_path %>
+
+<footer>
+	<div id="footer-main">
+		<strong>
+		<%= link_to t('links.back'), rooms_path %>
+		</strong>
+	</div>
+</footer>

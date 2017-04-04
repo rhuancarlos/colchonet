@@ -1,8 +1,10 @@
 <h1><%= t 'users.new.title' %></h1>
 <%= render 'form' %>
+
 <footer>
 	<div id="footer-main">
-		<%= link_to t('links.show'), @user %> |
-		<%= link_to t('links.back'), @user %>
+		<strong>
+		<%= link_to t('links.show'), @user %> :: <%= link_to t('links.back'), @user %>
+		</strong>
 	</div>
 </footer>
