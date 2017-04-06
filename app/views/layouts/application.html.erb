@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>Colchonet</title>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico'
-    	rel='stylesheet' type='text/css'>
-    <%=stylesheet_link_tag  "application",
-    						media: "all",
-    						"data-turbolinks-track" => true %>
-	<% javascript_include_tag "application",
-							"data-turbolinks-track" => true %>
+    <!-- Include file FONT='Pacifico' external CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- Include all files CSS, app/assets/stylesheets -->
+    <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
+    <!-- Include files JAVASCRIPTS in app/assets/javascripts -->
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <!-- Call of TOKEN that encrypt all solicitation or server of data -->
     <%= csrf_meta_tags %>
   </head>
 

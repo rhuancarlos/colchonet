@@ -18,7 +18,9 @@
         <td><%= room.description %></td>
         <td><%= link_to t('links.show'), room %></td>
         <td><%= link_to t('links.edit'), edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to t('links.destroy'), room,  method: :delete, data: { confirm: 'Deseja remover este registro ?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,3 @@
     </strong>
   </div>
 </footer>
-
