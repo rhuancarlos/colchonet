@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th><%= t 'rooms.show.id' %></th>
       <th><%= t 'rooms.show.title' %></th>
       <th><%= t 'rooms.show.location' %></th>
       <th><%= t 'rooms.show.description' %></th>
@@ -13,6 +14,9 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
+        <td>
+          <%= room.id %>
+        </td>
         <td>
           <%= room.title %>
         </td>
