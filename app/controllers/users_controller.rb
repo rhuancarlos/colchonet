@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	def index
 	end
 
-	# Metodo de vizualização(mostrar), levando em seus parametros o id do usuario para facilizar a 
+	# Metodo de vizualização(mostrar), levando em seus parametros o id do usuario para facilizar a
 	# precisão na exibição de um registro em especifico.
 	def show
 		@user = User.find(params[:id])
@@ -18,6 +18,8 @@ class UsersController < ApplicationController
 	def create #chamada interna da aplicação
 		@user = User.new(user_params)
 		if @user.save
+			Signup.confirm_email(@user).deliver
+			
 			redirect_to @user,
 				notice: 'Cadastro realizado com sucesso !'
 		else
@@ -29,7 +31,7 @@ class UsersController < ApplicationController
 	def edit #chamada no browser
 		@user = User.find(params[:id])
 	end
-	
+
 	# Metodo de criação 'update tabela_de_usuarios'
 	def update #chamada interna da aplicação
 		@user = User.find(params[:id])
