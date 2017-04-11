@@ -1,0 +1,11 @@
+<h1><%= t '.title' %></h1>
+
+<% if @user_session.errors.has_key? :base %>
+  <div id="error_explanation">
+    <%= @user_session.erros[:base].join(', ') %>
+  </div>
+  <% end %>
+
+  <%= render 'form' %>
+
+  </div>
